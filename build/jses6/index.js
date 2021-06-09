@@ -1,11 +1,15 @@
 /**
  * Do not edit directly
- * Generated on Wed, 09 Jun 2021 10:42:23 GMT
+ * Generated on Wed, 09 Jun 2021 11:21:22 GMT
  */
 
 export const Sizes40 = 40;
 export const Sizes60 = 60;
 export const Sizes80 = 80;
+export const ColorsGreen = "rgba(10, 207, 131, 1)";
+export const ColorsBlue = "rgba(26, 188, 254, 1)";
+export const ColorsPurple = "rgba(162, 89, 255, 1)";
+export const ColorsRed = "rgba(242, 78, 30, 1)";
 export const TypoHeader1FontSize = 64;
 export const TypoHeader1TextDecoration = "none";
 export const TypoHeader1FontFamily = "Roboto";

@@ -1,12 +1,16 @@
 /**
  * Do not edit directly
- * Generated on Wed, 09 Jun 2021 10:42:23 GMT
+ * Generated on Wed, 09 Jun 2021 11:21:22 GMT
  */
 
 module.exports = {
   "Sizes40": 40,
   "Sizes60": 60,
   "Sizes80": 80,
+  "ColorsGreen": "rgba(10, 207, 131, 1)",
+  "ColorsBlue": "rgba(26, 188, 254, 1)",
+  "ColorsPurple": "rgba(162, 89, 255, 1)",
+  "ColorsRed": "rgba(242, 78, 30, 1)",
   "TypoHeader1FontSize": 64,
   "TypoHeader1TextDecoration": "none",
   "TypoHeader1FontFamily": "Roboto",
