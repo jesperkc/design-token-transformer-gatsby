@@ -1,0 +1,35 @@
+{
+  "source": ["tokens/design-tokens.json"],
+  "platforms": {
+    "less": {
+      "transformGroup": "less",
+      "buildPath": "build/less/",
+      "files": [
+        {
+          "destination": "_variables.less",
+          "format": "less/variables"
+        }
+      ]
+    },
+    "jses6": {
+      "transformGroup": "js",
+      "buildPath": "build/jses6/",
+      "files": [
+        {
+          "format": "javascript/es6",
+          "destination": "index.js"
+        }
+      ]
+    },
+    "json-flat": {
+      "transformGroup": "js",
+      "buildPath": "build/json/",
+      "files": [
+        {
+          "destination": "styles.json",
+          "format": "json/flat"
+        }
+      ]
+    }
+  }
+}
