@@ -14,7 +14,9 @@
   "devDependencies": {
     "prettier": "2.2.1"
   },
-  "keywords": ["gatsby"],
+  "keywords": [
+    "gatsby"
+  ],
   "license": "0BSD",
   "scripts": {
     "start": "npm run transform-tokens",

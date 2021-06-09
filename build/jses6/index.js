@@ -1,23 +1,23 @@
 /**
  * Do not edit directly
- * Generated on Wed, 09 Jun 2021 09:12:01 GMT
+ * Generated on Wed, 09 Jun 2021 09:41:47 GMT
  */
 
 export const Sizes40 = 40;
 export const Sizes60 = 60;
 export const Sizes80 = 80;
-export const TypoH1FontSize = 64;
-export const TypoH1TextDecoration = "none";
-export const TypoH1FontFamily = "Roboto";
-export const TypoH1FontWeight = 900;
-export const TypoH1FontStyle = "normal";
-export const TypoH1FontStretch = "normal";
-export const TypoH1FontStyleOld = "Black";
-export const TypoH1LetterSpacing = 2;
-export const TypoH1LineHeight = 160;
-export const TypoH1ParagraphIndent = 0;
-export const TypoH1ParagraphSpacing = 8;
-export const TypoH1TextCase = "uppercase";
+export const TypoHeader1FontSize = 64;
+export const TypoHeader1TextDecoration = "none";
+export const TypoHeader1FontFamily = "Roboto";
+export const TypoHeader1FontWeight = 900;
+export const TypoHeader1FontStyle = "normal";
+export const TypoHeader1FontStretch = "normal";
+export const TypoHeader1FontStyleOld = "Black";
+export const TypoHeader1LetterSpacing = 2;
+export const TypoHeader1LineHeight = 160;
+export const TypoHeader1ParagraphIndent = 0;
+export const TypoHeader1ParagraphSpacing = 8;
+export const TypoHeader1TextCase = "uppercase";
 export const TypoH2FontSize = 40;
 export const TypoH2TextDecoration = "none";
 export const TypoH2FontFamily = "Roboto";
