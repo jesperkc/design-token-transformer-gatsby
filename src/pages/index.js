@@ -1,6 +1,6 @@
 import * as React from "react"
-import tokens from "../../tokens/design-tokens.json"
-console.log(tokens)
+import tokens from "../../build/jsnested/styles.json"
+//console.log(tokens)
 const IndexPage = () => (
   <div>
     <h1>Hi people</h1>
