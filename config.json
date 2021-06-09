@@ -11,6 +11,16 @@
         }
       ]
     },
+    "js": {
+      "transformGroup": "js",
+      "buildPath": "build/js/",
+      "files": [
+        {
+          "destination": "index.js",
+          "format": "javascript/module-flat"
+        }
+      ]
+    },
     "jses6": {
       "transformGroup": "js",
       "buildPath": "build/jses6/",
@@ -28,6 +38,16 @@
         {
           "destination": "styles.json",
           "format": "json/flat"
+        }
+      ]
+    },
+    "json-nested": {
+      "transformGroup": "js",
+      "buildPath": "build/jsnested/",
+      "files": [
+        {
+          "destination": "styles.json",
+          "format": "json/nested"
         }
       ]
     }

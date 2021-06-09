@@ -1,0 +1,54 @@
+{
+  "sizes": {
+    "40": 40,
+    "60": 60,
+    "80": 80
+  },
+  "typo": {
+    "header1": {
+      "category": "font",
+      "fontSize": 64,
+      "textDecoration": "none",
+      "fontFamily": "Roboto",
+      "fontWeight": 900,
+      "fontStyle": "normal",
+      "fontStretch": "normal",
+      "_fontStyleOld": "Black",
+      "letterSpacing": 2,
+      "lineHeight": 160,
+      "paragraphIndent": 0,
+      "paragraphSpacing": 8,
+      "textCase": "uppercase"
+    },
+    "h2": {
+      "category": "font",
+      "fontSize": 40,
+      "textDecoration": "none",
+      "fontFamily": "Roboto",
+      "fontWeight": 900,
+      "fontStyle": "normal",
+      "fontStretch": "normal",
+      "_fontStyleOld": "Black",
+      "letterSpacing": 2,
+      "lineHeight": "normal",
+      "paragraphIndent": 0,
+      "paragraphSpacing": 20,
+      "textCase": "uppercase"
+    },
+    "bodyText": {
+      "category": "font",
+      "fontSize": 18,
+      "textDecoration": "none",
+      "fontFamily": "Roboto",
+      "fontWeight": 400,
+      "fontStyle": "normal",
+      "fontStretch": "normal",
+      "_fontStyleOld": "Regular",
+      "letterSpacing": 0,
+      "lineHeight": "normal",
+      "paragraphIndent": 0,
+      "paragraphSpacing": 20,
+      "textCase": "none"
+    }
+  }
+}
