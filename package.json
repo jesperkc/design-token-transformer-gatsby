@@ -17,12 +17,12 @@
   "keywords": [],
   "license": "0BSD",
   "scripts": {
-    "start": "npm run transform-tokens",
+    "start-transform-tokens": "npm run transform-tokens",
     "transform-tokens": "style-dictionary build",
     "build": "gatsby build",
     "develop": "style-dictionary build && gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start-gatsby": "npm run develop",
+    "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"

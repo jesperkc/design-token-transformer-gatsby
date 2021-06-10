@@ -1,105 +1,104 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.com">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's default starter
-</h1>
+# Design Token Transformer
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+This package is supposed to be used together with the [Design Tokens plugin for Figma](https://github.com/lukasoppermann/design-tokens).
+It transforms the exported design tokens using [Amazon style dictionary](https://amzn.github.io/style-dictionary/#/).
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.com/docs/gatsby-starters/)._
+## Installation
 
-## 🚀 Quick start
+### 1. Download or clone the repo to your computer
 
-1.  **Create a Gatsby site.**
+You can [download this package](https://github.com/lukasoppermann/design-token-transformer/archive/master.zip) or clone it via the terminal.
 
-    Use the Gatsby CLI to create a new site, specifying the default starter.
+```Bash
+git clone https://github.com/lukasoppermann/design-token-transformer.git
+```
 
-    ```shell
-    # create a new Gatsby site using the default starter
-    gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
-    ```
+### 2. Install dependencies
 
-1.  **Start developing.**
+1. From within the terminal `cd` (navigate) this folder.
+2. Run `npm i` to install the dependencies.
 
-    Navigate into your new site’s directory and start it up.
+## Usage
 
-    ```shell
-    cd my-default-starter/
-    gatsby develop
-    ```
+### Option 1: Local transformation
 
-1.  **Open the source code and start editing!**
+To use an exported json file and transform it locally on your machine, follow the 3 steps below:
 
-    Your site is now running at `http://localhost:8000`!
+1. Save the `.json` file you exported using the [Design Token](https://github.com/lukasoppermann/design-tokens) plugin to the [`tokens` folder](./tokens/) (and remove the example files).
+2. In the terminal `cd` (navigate) to this folder.
+3. Run `npm run transform-tokens`.
+4. 🎉 Your converted tokens should be in the build folder.
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.com/tutorial/part-five/#introducing-graphiql)._
+### Option 2: Transformation in github repository (or on server)
 
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+##### 1. Fork this repository.
 
-## 🚀 Quick start (Gatsby Cloud)
+It is recommended to create a [fork](../../fork) of this repository and adapt it to your needs.  
+Should you decide to instead create a new repo, make sure to set up a [.github/workflows](.github/workflows) file that handles the data.
 
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
+##### 2. Enable github actions in the [actions tab](../../actions)
 
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-default)
+Go to the [actions tab](../../actions) in **your fork** of this repository and enable the github actions by clicking the `enable actions` button.
 
-## 🧐 What's inside?
+##### 3. Create a [personal access token](#personal-access-token).
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
+##### 4. Add repo url & access token to plugin settings
 
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    └── README.md
+In the plugin settings you need to add two items:
 
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+1. Add the url to your repository in the format `https://api.github.com/repo/:username/:repo/dispatches` to the `server-url` field (See [server-url](https://github.com/lukasoppermann/design-tokens/#server-url) for details)
+2. Add the [personal access token](#personal-access-token) to the [access token](https://github.com/lukasoppermann/design-tokens/#access-token) field.
 
-2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
+##### 5. Run the `Send Design Tokens to Url` command from the plugin.
 
-3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
+##### 6. 🎉 You are done.
 
-4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
+You should be able to see the action running in your GitHub repo and have all the converted files in the [build folder](./build) once it is done.
 
-5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.com/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
+##### 7. Optional: Adapt the `transform-tokens` script in the [package.json](./package.json).
 
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.com/docs/gatsby-config/) for more detail).
+If you want to you can do something else when the tokens are pushed to the server you can change the `transform-tokens` script in the [package.json](./package.json). However note that the name of the script `transform-tokens` should not be changed.
 
-7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.com/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
+##### 8. Optional: Adapt the [github workflow](.github/workflows/transform-tokens.yml)
 
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.com/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
+You can adapt the workflow file if you need to. Just make sure the keep the current setup working.
 
-9.  **`LICENSE`**: This Gatsby starter is licensed under the 0BSD license. This means that you can see this file as a placeholder and replace it with your own license.
+#### Personal access token
 
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
+The access token should be specifically for this plugin and only have the minimal permissions needed:
 
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
+- only `public_repo` is needed for a public repository.
 
-12. **`README.md`**: A text file containing useful reference information about your project.
+The token is not stored with the Figma file but only locally on your machine.
 
-## 🎓 Learning Gatsby
+Here you can find more information about [creating personal access tokens in the docs](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token).
 
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.com/). Here are some places to start:
+### Custom dev server
 
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.com/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
+If you want to set up a custom server that responds to a push from this plugin, check out the setup for GitHub and adapt it to your needs.
+If you run into problems, please create an issues in the main [Design Tokens plugin for Figma repository](https://github.com/lukasoppermann/design-tokens/issues/new).
 
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.com/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
+## Customization
 
-## 💫 Deploy
+To customize the output please view the [Amazon style dictionary documentation](https://amzn.github.io/style-dictionary/#/config).
 
-[Build, Deploy, and Host On The Only Cloud Built For Gatsby](https://www.gatsbyjs.com/cloud/)
+## FAQ
 
-Gatsby Cloud is an end-to-end cloud platform specifically built for the Gatsby framework that combines a modern developer experience with an optimized, global edge network.
+### Sending tokens to the server
 
-<!-- AUTO-GENERATED-CONTENT:END -->
+#### I don't see the tokens in the github repositiory
+
+1. Make sure you have a [.github/workflows](.github/workflows)
+2. Make sure you enabled github actions in the [actions tab](../../actions) of **your** repositiory.
+3. Verify that you specified the correct server url in the plugin settings: `https://api.github.com/repos/{username}/{reponame}/dispatches` (replace `{username}` with your username e.g. `lukasoppermann` and `{reponame}` with the name of your repo e.g. `design-token-transformer`)
+4. Verify that the action runs without any error
+
+#### I can't enable github actions
+
+If you only see the `Get started with GitHub Actions` page without an option to `enable actions` you either deleted the [.github/workflows](.github/workflows) file from your forked repository, or you created a new repositiory without adding a [.github/workflows](.github/workflows) file. See [step 1](#1-fork-this-repository).
+
+## Bugs, issues & feature requests
+
+If you have issues concerning the [Design Tokens plugin for Figma](https://github.com/lukasoppermann/design-tokens) please [create an issue in the plugin repo](https://github.com/lukasoppermann/design-tokens/issues/new).
+
+Only create an issue in this repository if you have an issue with this transformation package.

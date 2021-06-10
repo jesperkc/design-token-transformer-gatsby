@@ -1,16 +1,23 @@
 import * as React from "react"
 import tokens from "../../build/jsnested/styles.json"
-//console.log(tokens)
+console.log(tokens)
 const IndexPage = () => (
   <div>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <h1>Styles</h1>
+    <hr />
 
+    <h2>Colors</h2>
     {tokens &&
-      Object.keys(tokens.sizes).map(key => (
-        <div key={key}>{tokens.sizes[key].value}</div>
+      Object.keys(tokens.colors).map(key => (
+        <Color key={key} name={key} color={tokens.colors[key]} />
       ))}
+    <hr />
+    <h2>Typography</h2>
     {tokens &&
       Object.keys(tokens.typo).map(key => (
         <Typo key={key} name={key} typo={tokens.typo[key]} />
@@ -18,8 +25,37 @@ const IndexPage = () => (
   </div>
 )
 
+const Color = ({ name, color }) => {
+  const style = {
+    backgroundColor: color,
+    width: 50,
+    height: 50,
+    fontSize: 10
+  }
+
+  return (
+    <div>
+      <div style={style}></div>
+      <div>{name}</div>
+    </div>
+  )
+}
+
 const Typo = ({ name, typo }) => {
-  return <div style={{ fontSize: typo.fontSize.value }}>{name}</div>
+  console.log(typo)
+  const style = {
+    fontSize: typo.fontSize,
+    fontWeight: typo.fontWeight,
+    letterSpacing: typo.letterSpacing,
+    lineHeight: isNaN(typo.lineHeight)
+      ? typo.lineHeight
+      : typo.lineHeight / typo.fontSize,
+    textTransform: typo.textCase,
+    fontFamily: typo.fontFamily,
+    marginBottom: typo.paragraphSpacing
+  }
+  console.log(style)
+  return <div style={style}>{name}</div>
 }
 
 export default IndexPage
