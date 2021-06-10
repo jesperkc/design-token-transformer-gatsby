@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Thu, 10 Jun 2021 09:04:20 GMT
+ * Generated on Thu, 10 Jun 2021 10:43:37 GMT
  */
 
 export const Sizes40 = 40;
