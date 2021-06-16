@@ -2,7 +2,7 @@ import * as React from "react"
 import tokens from "../../build/jsnested/styles.json"
 console.log(tokens)
 const IndexPage = () => (
-  <div>
+  <div style={{ fontFamily: "Arial" }}>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap"
@@ -30,13 +30,16 @@ const Color = ({ name, color }) => {
     backgroundColor: color,
     width: 50,
     height: 50,
-    fontSize: 10
+    fontSize: 10,
+    borderRadius: 10
   }
 
   return (
-    <div>
+    <div style={{ marginBottom: 20, width: 50 }}>
       <div style={style}></div>
-      <div>{name}</div>
+      <div style={{ textAlign: "center", fontSize: 14, marginTop: 5 }}>
+        {name}
+      </div>
     </div>
   )
 }
