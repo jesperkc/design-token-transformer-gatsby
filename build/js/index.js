@@ -1,13 +1,13 @@
 /**
  * Do not edit directly
- * Generated on Wed, 16 Jun 2021 07:03:37 GMT
+ * Generated on Wed, 16 Jun 2021 07:11:10 GMT
  */
 
 module.exports = {
   "Sizes40": 40,
   "Sizes60": 60,
   "Sizes80": 80,
-  "ColorsGreen": "rgba(255, 199, 0, 1)",
+  "ColorsGreen": "rgba(0, 255, 0, 1)",
   "ColorsBlue": "rgba(26, 188, 254, 1)",
   "ColorsPurple": "rgba(162, 89, 255, 1)",
   "ColorsRed": "rgba(242, 78, 30, 1)",

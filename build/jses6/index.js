@@ -1,12 +1,12 @@
 /**
  * Do not edit directly
- * Generated on Wed, 16 Jun 2021 07:03:37 GMT
+ * Generated on Wed, 16 Jun 2021 07:11:10 GMT
  */
 
 export const Sizes40 = 40;
 export const Sizes60 = 60;
 export const Sizes80 = 80;
-export const ColorsGreen = "rgba(255, 199, 0, 1)";
+export const ColorsGreen = "rgba(0, 255, 0, 1)";
 export const ColorsBlue = "rgba(26, 188, 254, 1)";
 export const ColorsPurple = "rgba(162, 89, 255, 1)";
 export const ColorsRed = "rgba(242, 78, 30, 1)";
