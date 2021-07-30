@@ -1,7 +1,7 @@
 {
-  "name": "@jesperkcltd/design-token-gatsby",
-  "private": true,
-  "description": "",
+  "name": "@jesperkc/design-tokens",
+  "private": false,
+  "description": "This package is supposed to be used together with the [Design Tokens plugin for Figma](https://github.com/lukasoppermann/design-tokens). It transforms the exported design tokens using [Amazon style dictionary](https://amzn.github.io/style-dictionary/#/).",
   "version": "0.1.0",
   "author": "Jesper <jesperkc@gmail.com>",
   "dependencies": {
