@@ -2,7 +2,7 @@
   "name": "@jesperkc/design-tokens",
   "private": false,
   "description": "This package is supposed to be used together with the [Design Tokens plugin for Figma](https://github.com/lukasoppermann/design-tokens). It transforms the exported design tokens using [Amazon style dictionary](https://amzn.github.io/style-dictionary/#/).",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Jesper <jesperkc@gmail.com>",
   "dependencies": {
     "gatsby": "3.6.2",
@@ -29,9 +29,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jesperkc/design-token-transformer-gatsby"
+    "url": "git+https://github.com/jesperkc/design-token-transformer-gatsby.git"
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
-  }
+  },
+  "homepage": "https://github.com/jesperkc/design-token-transformer-gatsby#readme",
+  "main": "gatsby-config.js"
 }
