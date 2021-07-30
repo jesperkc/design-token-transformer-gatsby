@@ -1,9 +1,9 @@
 {
-  "name": "design-token-gatsby",
+  "name": "@jesperkcltd/design-token-gatsby",
   "private": true,
   "description": "",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Jesper <jesperkc@gmail.com>",
   "dependencies": {
     "gatsby": "3.6.2",
     "react": "^17.0.1",
